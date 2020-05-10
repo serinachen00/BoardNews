@@ -72,6 +72,9 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="News" id="IU8-Jl-ENN"/>
+                    <connections>
+                        <outlet property="tableView" destination="9Kk-SX-WOx" id="osw-df-tar"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>

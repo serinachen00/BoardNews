@@ -7,6 +7,9 @@ target 'BoardNews' do
 
   # Pods for BoardNews
  pod 'Alamofire', '~> 5.2'
+ pod 'SwiftyJSON'
+ pod 'SDWebImage'
+ 
   target 'BoardNewsTests' do
     inherit! :search_paths
     # Pods for testing

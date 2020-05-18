@@ -18,6 +18,8 @@
 		1FA26BFD245E435C008D277D /* BoardNewsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FA26BFC245E435C008D277D /* BoardNewsTests.swift */; };
 		1FA26C08245E435C008D277D /* BoardNewsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FA26C07245E435C008D277D /* BoardNewsUITests.swift */; };
 		80C4A7AD5C107A94054BD300 /* Pods_BoardNews.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 885A8428239D9CA9BE8C7940 /* Pods_BoardNews.framework */; };
+		8445DB0F247241CC00C505C4 /* ShoppingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8445DB0E247241CB00C505C4 /* ShoppingViewController.swift */; };
+		8445DB112472458100C505C4 /* ProductListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8445DB102472458100C505C4 /* ProductListCell.swift */; };
 		B47C62A15E41989634707425 /* Pods_BoardNews_BoardNewsUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CC4C51F2CA4038D04107974C /* Pods_BoardNews_BoardNewsUITests.framework */; };
 		B7237263E0BE1EAF401BB8D3 /* Pods_BoardNewsTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AF24B52DDF87A7A30A906457 /* Pods_BoardNewsTests.framework */; };
 		CBF0242724720BF900C161F3 /* WeatherViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBF0242624720BF900C161F3 /* WeatherViewController.swift */; };
@@ -61,6 +63,8 @@
 		1FA26C09245E435C008D277D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		364A364814B0A12DEB573DAD /* Pods-BoardNews.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BoardNews.release.xcconfig"; path = "Target Support Files/Pods-BoardNews/Pods-BoardNews.release.xcconfig"; sourceTree = "<group>"; };
 		75FACD2BD53781E9DE639F4F /* Pods-BoardNews-BoardNewsUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BoardNews-BoardNewsUITests.debug.xcconfig"; path = "Target Support Files/Pods-BoardNews-BoardNewsUITests/Pods-BoardNews-BoardNewsUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		8445DB0E247241CB00C505C4 /* ShoppingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingViewController.swift; sourceTree = "<group>"; };
+		8445DB102472458100C505C4 /* ProductListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductListCell.swift; sourceTree = "<group>"; };
 		885A8428239D9CA9BE8C7940 /* Pods_BoardNews.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BoardNews.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9C0D8DD94619EDE0A1C48661 /* Pods-BoardNewsTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BoardNewsTests.debug.xcconfig"; path = "Target Support Files/Pods-BoardNewsTests/Pods-BoardNewsTests.debug.xcconfig"; sourceTree = "<group>"; };
 		AF24B52DDF87A7A30A906457 /* Pods_BoardNewsTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BoardNewsTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -125,6 +129,8 @@
 			isa = PBXGroup;
 			children = (
 				CBF0242624720BF900C161F3 /* WeatherViewController.swift */,
+				8445DB102472458100C505C4 /* ProductListCell.swift */,
+				8445DB0E247241CB00C505C4 /* ShoppingViewController.swift */,
 				CBF0242824720C1100C161F3 /* WeatherData.swift */,
 				1FA26BE2245E4358008D277D /* AppDelegate.swift */,
 				1FA26BE4245E4358008D277D /* SceneDelegate.swift */,
@@ -424,7 +430,9 @@
 				CBF0242924720C1100C161F3 /* WeatherData.swift in Sources */,
 				1FA26BE3245E4358008D277D /* AppDelegate.swift in Sources */,
 				1FA26BE5245E4358008D277D /* SceneDelegate.swift in Sources */,
+				8445DB112472458100C505C4 /* ProductListCell.swift in Sources */,
 				1FA26BED245E4358008D277D /* BoardNews.xcdatamodeld in Sources */,
+				8445DB0F247241CC00C505C4 /* ShoppingViewController.swift in Sources */,
 				1F749206246D12CE00E28554 /* NewsCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

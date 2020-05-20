@@ -38,6 +38,51 @@
             </objects>
             <point key="canvasLocation" x="357.97101449275362" y="843.75"/>
         </scene>
+        <!--Webview View Controller-->
+        <scene sceneID="HnZ-TY-JAA">
+            <objects>
+                <viewController storyboardIdentifier="web" id="S0e-ja-0qH" customClass="WebviewViewController" customModule="BoardNews" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="L1o-9J-g8b">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VjO-AI-hLU">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </webView>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qof-2E-uk6">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
+                                <items>
+                                    <navigationItem title="Title" id="aeL-gR-uM4">
+                                        <barButtonItem key="leftBarButtonItem" title="&lt;Back" id="UKq-6w-zkz">
+                                            <connections>
+                                                <action selector="backButtonPressed:" destination="S0e-ja-0qH" id="jah-kO-e4l"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="VjO-AI-hLU" firstAttribute="leading" secondItem="Ii8-ze-lPN" secondAttribute="leading" id="0hN-h1-vb2"/>
+                            <constraint firstItem="qof-2E-uk6" firstAttribute="top" secondItem="L1o-9J-g8b" secondAttribute="top" id="BkZ-iN-BZL"/>
+                            <constraint firstItem="VjO-AI-hLU" firstAttribute="bottom" secondItem="Ii8-ze-lPN" secondAttribute="bottom" id="HQc-dD-Wiw"/>
+                            <constraint firstItem="VjO-AI-hLU" firstAttribute="top" secondItem="Ii8-ze-lPN" secondAttribute="top" id="VXp-vX-Ug9"/>
+                            <constraint firstItem="qof-2E-uk6" firstAttribute="trailing" secondItem="Ii8-ze-lPN" secondAttribute="trailing" id="X7a-YR-8P1"/>
+                            <constraint firstItem="qof-2E-uk6" firstAttribute="leading" secondItem="Ii8-ze-lPN" secondAttribute="leading" id="Z02-1T-Z8U"/>
+                            <constraint firstItem="VjO-AI-hLU" firstAttribute="trailing" secondItem="Ii8-ze-lPN" secondAttribute="trailing" id="sfN-UW-WdS"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Ii8-ze-lPN"/>
+                    </view>
+                    <connections>
+                        <outlet property="webview" destination="VjO-AI-hLU" id="lQl-YK-ROL"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="GNx-Rp-UcF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="356.52173913043481" y="1544.8660714285713"/>
+        </scene>
         <!--Shopping-->
         <scene sceneID="ZRp-cj-Pqz">
             <objects>

@@ -1,17 +1,20 @@
-
+//vc
 
 import UIKit
 
 class ViewController: UIViewController{
     
     @IBOutlet weak var tableView: UITableView!
-    var thenews: [News]? = []
+    var thenews: [News] = []
     
     override func viewDidLoad() {
         
         super.viewDidLoad()
         navigationItem.title = "BoardNews"
         tableView.register(NewsCell.self, forCellReuseIdentifier: NewsCell.reuseIdentifier)
+        
+       // tableView.estimatedRowHeight = 100.0
+       // tableView.rowHeight = UITableView.automaticDimension
         tableView.delegate = self
         tableView.dataSource = self
         fetchNews()
@@ -28,7 +31,7 @@ class ViewController: UIViewController{
             
                do {
                    let json = try JSONSerialization.jsonObject(with: data!, options: .mutableContainers) as! [String: AnyObject]
-                   
+                   print(json)
                    if let articlesFromJson = json["articles"] as? [[String : AnyObject]]{
                        
                        for articleFromJson in articlesFromJson {
@@ -44,7 +47,7 @@ class ViewController: UIViewController{
                                article.url = url
                                article.imageUrl = urlToImage
                            }
-                           self.thenews?.append(article)
+                           self.thenews.append(article)
                        }
                     
                    }
@@ -64,22 +67,66 @@ class ViewController: UIViewController{
 extension ViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return thenews?.count ?? 0
+        return thenews.count
+    }
+    //height for tableview cell
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 100
     }
     
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+ func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: NewsCell.reuseIdentifier, for: indexPath) as? NewsCell else{
             fatalError()
         }
-        let data = thenews?[indexPath.row]
-        cell.textLabel?.text = data?.headline
-        cell.detailTextLabel?.text = data?.desc
+        let data = thenews[indexPath.row]
+        cell.newsTitleLabel.text = data.headline
+        cell.newsSubitleLabel.text = data.desc
+    
+        
+        // has to put either guard or let to unwrap the value
+        if let url = data.imageUrl {
+            
+            cell.newsImageView.downloadImage(from: url)
+        }
+        
         return cell
     }
     
-        
-        
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+
+           
+           let webvc = UIStoryboard.init(name: "Main", bundle: nil).instantiateViewController(identifier: "web") as! WebviewViewController
+           webvc.url = self.thenews[indexPath.item].url
+           self.present(webvc, animated: true,completion: nil)
+           
+       }
+
+    
     }
+        
+        
+
+
+extension UIImageView {
+    
+    func downloadImage(from url: String){
+        
+        let urlRequest = URLRequest(url: URL(string: url)!)
+        
+        let task = URLSession.shared.dataTask(with: urlRequest) { (data,response,error) in
+            
+            if error != nil {
+                print(error)
+                return
+            }
+            
+            DispatchQueue.main.async {
+                self.image = UIImage(data: data!)
+            }
+        }
+        task.resume()
+    }
+}
 
 class News: NSObject {
 
@@ -89,3 +136,4 @@ class News: NSObject {
     var url: String?
     var imageUrl: String?
 }
+

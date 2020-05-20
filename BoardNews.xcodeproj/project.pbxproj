@@ -17,6 +17,7 @@
 		1FA26BF2245E435C008D277D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1FA26BF0245E435C008D277D /* LaunchScreen.storyboard */; };
 		1FA26BFD245E435C008D277D /* BoardNewsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FA26BFC245E435C008D277D /* BoardNewsTests.swift */; };
 		1FA26C08245E435C008D277D /* BoardNewsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FA26C07245E435C008D277D /* BoardNewsUITests.swift */; };
+		1FBCA0742474923400FEC2D3 /* WebviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FBCA0732474923400FEC2D3 /* WebviewViewController.swift */; };
 		80C4A7AD5C107A94054BD300 /* Pods_BoardNews.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 885A8428239D9CA9BE8C7940 /* Pods_BoardNews.framework */; };
 		8445DB0F247241CC00C505C4 /* ShoppingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8445DB0E247241CB00C505C4 /* ShoppingViewController.swift */; };
 		8445DB112472458100C505C4 /* ProductListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8445DB102472458100C505C4 /* ProductListCell.swift */; };
@@ -61,6 +62,7 @@
 		1FA26C03245E435C008D277D /* BoardNewsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BoardNewsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1FA26C07245E435C008D277D /* BoardNewsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoardNewsUITests.swift; sourceTree = "<group>"; };
 		1FA26C09245E435C008D277D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1FBCA0732474923400FEC2D3 /* WebviewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebviewViewController.swift; sourceTree = "<group>"; };
 		364A364814B0A12DEB573DAD /* Pods-BoardNews.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BoardNews.release.xcconfig"; path = "Target Support Files/Pods-BoardNews/Pods-BoardNews.release.xcconfig"; sourceTree = "<group>"; };
 		75FACD2BD53781E9DE639F4F /* Pods-BoardNews-BoardNewsUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BoardNews-BoardNewsUITests.debug.xcconfig"; path = "Target Support Files/Pods-BoardNews-BoardNewsUITests/Pods-BoardNews-BoardNewsUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		8445DB0E247241CB00C505C4 /* ShoppingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingViewController.swift; sourceTree = "<group>"; };
@@ -135,6 +137,7 @@
 				1FA26BE2245E4358008D277D /* AppDelegate.swift */,
 				1FA26BE4245E4358008D277D /* SceneDelegate.swift */,
 				1FA26BE6245E4358008D277D /* ViewController.swift */,
+				1FBCA0732474923400FEC2D3 /* WebviewViewController.swift */,
 				1F749205246D12CE00E28554 /* NewsCell.swift */,
 				1FA26BE8245E4358008D277D /* Main.storyboard */,
 				1FA26BEE245E435C008D277D /* Assets.xcassets */,
@@ -431,6 +434,7 @@
 				1FA26BE3245E4358008D277D /* AppDelegate.swift in Sources */,
 				1FA26BE5245E4358008D277D /* SceneDelegate.swift in Sources */,
 				8445DB112472458100C505C4 /* ProductListCell.swift in Sources */,
+				1FBCA0742474923400FEC2D3 /* WebviewViewController.swift in Sources */,
 				1FA26BED245E4358008D277D /* BoardNews.xcdatamodeld in Sources */,
 				8445DB0F247241CC00C505C4 /* ShoppingViewController.swift in Sources */,
 				1F749206246D12CE00E28554 /* NewsCell.swift in Sources */,
